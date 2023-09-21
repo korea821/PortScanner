@@ -1,4 +1,4 @@
-# PortScanner
+# Py3-Port-Scanner
 A simple and fast Python3 Port Scanner.
 
 
