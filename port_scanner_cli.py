@@ -21,7 +21,7 @@ messages = messages.get(current_locale, messages["en_US"])
 
 def scan_target(ip, port, file_name):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        socket.setdefaulttimeout(2)
+        socket.setdefaulttimeout(1)
         result = s.connect_ex((ip, port))  # Returns 0 if success
         if result == 0:
             message = f"{ip}"
@@ -64,7 +64,7 @@ def main():
     
     target_ips = IPv4Network(cidr)
     
-    socket.setdefaulttimeout(2) # Timeout 값 2초
+    socket.setdefaulttimeout(1) # Timeout 값 1초
     
     with ThreadPoolExecutor(max_workers=50) as executor:
         for ip in target_ips:
