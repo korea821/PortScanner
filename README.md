@@ -16,7 +16,7 @@ Launch the Linux terminal.
 ```Bash
 git clone https://github.com/korea821/py3-port-scanner.git
 cd py3-port-scanner
-python3 port-scanner.py
+python3 port_scanner_cli.py or port_scanner_gui.py
 ```
 
 Please enter the IP address range to scan in CIDR format. (e.g., 192.168.0.0/24)
