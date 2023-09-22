@@ -40,13 +40,18 @@ def get_input_cidr():
             print(messages["wrong_cidr"])
 
 def get_ports():
-    ports = input(messages["input_ports"])
+    input_str = input(messages["input_ports"])
+    port_ranges = input_str.split(',')
+    ports = []
     
-    if "-" in ports:
-        start_port, end_port = map(int, ports.split("-"))
-        return range(start_port, end_port + 1)
-    else:
-        return [int(ports)]
+    for r in port_ranges:
+        if "-" in r:
+            start_port, end_port = map(int, r.split("-"))
+            ports.extend(range(start_port, end_port + 1))
+        else:
+            ports.append(int(r))
+
+    return ports
     
 def get_input_file_name():
     while True:
