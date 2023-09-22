@@ -21,7 +21,7 @@ python3 port_scanner_cli.py or port_scanner_gui.py
 
 Please enter the IP address range to scan in CIDR format. (e.g., 192.168.0.0/24)
 
-Please enter the port or port range to scan. (e.g., 80 or 80-100)
+Please enter the port or port range to scan. (e.g., 80 or 80-100 or 80,443 or 80,100-500)
 
 Please enter the name of the file to save. (e.g., results.txt)
 
