@@ -24,7 +24,7 @@ def scan_target(ip, port, file_name):
         socket.setdefaulttimeout(1)
         result = s.connect_ex((ip, port))  # Returns 0 if success
         if result == 0:
-            message = f"{ip}"
+            message = f"Port {port} open on {ip}"
             print(message)
             with open(file_name, 'a') as f:
                 f.write(message + "\n")
