@@ -3,6 +3,7 @@ import locale
 import json
 from ipaddress import IPv4Network, AddressValueError
 from concurrent.futures import ThreadPoolExecutor
+from collections import defaultdict
 
 # 시스템 locale 얻기
 current_locale = locale.setlocale(locale.LC_ALL, '')
@@ -19,15 +20,14 @@ messages = load_language_messages()
 
 messages = messages.get(current_locale, messages["en_US"])
 
-def scan_target(ip, port, file_name):
+def scan_target(ip, port, results):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         socket.setdefaulttimeout(1)
         result = s.connect_ex((ip, port))  # Returns 0 if success
         if result == 0:
-            message = f"Port {port} open on {ip}"
+            results[ip].append(port)
+            message = f"Port {port} open on {ip}"  # 실시간으로 결과를 화면에 출력
             print(message)
-            with open(file_name, 'a') as f:
-                f.write(message + "\n")
 
 def get_input_cidr():
     while True:
@@ -70,11 +70,28 @@ def main():
     target_ips = IPv4Network(cidr)
     
     socket.setdefaulttimeout(1) # Timeout 값 1초
+
+    # IP별로 열린 포트를 저장하는 dictionary
+    open_ports = defaultdict(list)
     
     with ThreadPoolExecutor(max_workers=50) as executor:
+        futures = []
         for ip in target_ips:
             for port in ports:
-                executor.submit(scan_target, str(ip), port, file_name)
+                futures.append(executor.submit(scan_target, str(ip), port, open_ports))
+
+    # 모든 스캔 작업이 완료되기를 기다림
+    for future in futures:
+        future.result()
+
+    # 결과 출력 및 파일에 저장
+    with open(file_name, 'a') as f:
+        for ip, ports in open_ports.items():
+            if ports:
+                ports.sort()  # 포트를 오름차순으로 정렬
+                message = f"{ip} has open ports: {', '.join(map(str, ports))}"
+                print(message)
+                f.write(message + "\n")
 
 if __name__ == "__main__":
     main()
