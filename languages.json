@@ -1,19 +1,19 @@
 {
-    "en_US": {
+    "en": {
         "input_cidr": "Please enter the IP address range to scan in CIDR format. (e.g., 192.168.0.0/24): ",
         "wrong_cidr": "Invalid input. Please enter in CIDR format.",
         "input_ports": "Please enter the port or port range to scan. (e.g., 80 or 80-100 or 80,443 or 80,100-500): ",
         "input_file_name": "Please enter the name of the file to save. (e.g., results.txt): ",
         "wrong_ext": "Invalid file extension. Please use a .txt extension."
     },
-    "ko_KR": {
+    "ko": {
         "input_cidr": "스캔할 IP 주소 범위를 CIDR 형식으로 입력해 주세요. (예: 192.168.0.0/24): ",
         "wrong_cidr": "잘못 입력했습니다. CIDR 형식으로 다시 입력해 주세요.",
         "input_ports": "스캔할 포트 또는 포트 범위를 입력해 주세요. (예: 80 또는 80-100 또는 80,443 또는 80,100-500): ",
         "input_file_name": "저장할 파일 이름을 입력해 주세요. (예: results.txt): ",
         "wrong_ext": "파일 확장자가 잘못되었습니다. txt 확장자로 다시 입력해 주세요."
     },
-    "Korean_Korea": {
+    "Korean": {
         "input_cidr": "스캔할 IP 주소 범위를 CIDR 형식으로 입력해 주세요. (예: 192.168.0.0/24): ",
         "wrong_cidr": "잘못 입력했습니다. CIDR 형식으로 다시 입력해 주세요.",
         "input_ports": "스캔할 포트 또는 포트 범위를 입력해 주세요. (예: 80 또는 80-100 또는 80,443 또는 80,100-500): ",
