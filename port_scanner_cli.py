@@ -7,7 +7,7 @@ from collections import defaultdict
 
 current_locale = locale.setlocale(locale.LC_ALL, '')
 
-current_locale = current_locale.split('.')[0]  # en_US.UTF-8 > en_US / Korean_Korea.949 -> Korean_Korea
+current_locale = current_locale.split('.')[0]
 
 def load_language_messages():
     with open("languages.json", "r", encoding="utf-8") as f:
