@@ -7,18 +7,20 @@ from collections import defaultdict
 
 def select_language():
     available_languages = {
-        "2": "en_US",
-        "3": "ko_KR"
+        "2": "en",
+        "3": "ko"
     }
     print("Select a language:")
     print("1. System language")
-    print("2. English (en_US)")
-    print("3. Korean (ko_KR)")
+    print("2. English (en)")
+    print("3. Korean (ko)")
 
     while True:
         choice = input("Enter your choice: ")
         if choice == "1":
-            return locale.setlocale(locale.LC_ALL, '').split('.')[0]
+            system_locale = locale.setlocale(locale.LC_ALL, '')
+            language_code = system_locale.split('_')[0] if '_' in system_locale else system_locale
+            return language_code
         elif choice in available_languages:
             return available_languages[choice]
         else:
@@ -31,7 +33,7 @@ def load_language_messages():
         return json.load(f)
     
 messages = load_language_messages()
-messages = messages.get(current_locale, messages["en_US"])
+messages = messages.get(current_locale, messages["en"])
 
 def scan_target(ip, port, results):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
