@@ -5,22 +5,38 @@ from ipaddress import IPv4Network, AddressValueError
 from concurrent.futures import ThreadPoolExecutor
 from collections import defaultdict
 
-current_locale = locale.setlocale(locale.LC_ALL, '')
+def select_language():
+    available_languages = {
+        "2": "en_US",
+        "3": "ko_KR"
+    }
+    print("Select a language:")
+    print("1. System language")
+    print("2. English (en_US)")
+    print("3. Korean (ko_KR)")
 
-current_locale = current_locale.split('.')[0]
+    while True:
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            return locale.setlocale(locale.LC_ALL, '').split('.')[0]
+        elif choice in available_languages:
+            return available_languages[choice]
+        else:
+            print("Invalid choice. Please try again.")
+
+current_locale = select_language()
 
 def load_language_messages():
     with open("languages.json", "r", encoding="utf-8") as f:
         return json.load(f)
     
 messages = load_language_messages()
-
 messages = messages.get(current_locale, messages["en_US"])
 
 def scan_target(ip, port, results):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         socket.setdefaulttimeout(1)
-        result = s.connect_ex((ip, port))  # Returns 0 if success
+        result = s.connect_ex((ip, port))
         if result == 0:
             results[ip].append(port)
             message = f"Port {port} open on {ip}"
@@ -63,8 +79,7 @@ def main():
     file_name = get_input_file_name()
     
     target_ips = IPv4Network(cidr)
-    
-    socket.setdefaulttimeout(1) # Timeout 값 1초
+    socket.setdefaulttimeout(1)
 
     open_ports = defaultdict(list)
     
