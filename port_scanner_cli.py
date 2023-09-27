@@ -8,12 +8,32 @@ from collections import defaultdict
 def select_language():
     available_languages = {
         "2": "en",
-        "3": "ko"
+        "3": "de",
+        "4": "fr",
+        "5": "it",
+        "6": "es",
+        "7": "pt",
+        "8": "ko",
+        "9": "ja",
+        "10": "zh",
+        "11": "hi",
+        "12": "ar",
+        "13": "ru"
     }
     print("Select a language:")
     print("1. System language")
-    print("2. English (en)")
-    print("3. Korean (ko)")
+    print("2. English")
+    print("3. Deutsch (German)")
+    print("4. Français (French)")
+    print("5. Italiano (Italian)")
+    print("6. Español (Spanish)")
+    print("7. Português (Portugal)")
+    print("8. 한국어 (Korean)")
+    print("9. 日本語 (Japanese)")
+    print("10. 中文 (简体) (Chinese)")
+    print("11. हिन्दी (Hindi)")
+    print("12. العربية  (Arabic)")
+    print("13. русский (Russian)")
 
     while True:
         choice = input("Enter your choice: ")
