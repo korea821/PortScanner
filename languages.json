@@ -6,6 +6,41 @@
         "input_file_name": "Please enter the name of the file to save. (e.g., results.txt): ",
         "wrong_ext": "Invalid file extension. Please use a .txt extension."
     },
+    "de": {
+        "input_cidr": "Bitte geben Sie den zu scannenden IP-Adressbereich im CIDR-Format ein. (z. B. 192.168.0.0/24): ",
+        "wrong_cidr": "Ungültige Eingabe. Bitte im CIDR-Format eingeben.",
+        "input_ports": "Bitte geben Sie den zu scannenden Port oder Portbereich ein. (z. B. 80 oder 80-100 oder 80,443 oder 80,100-500): ",
+        "input_file_name": "Bitte geben Sie den Namen der zu speichernden Datei ein. (z. B. results.txt): ",
+        "wrong_ext": "Ungültige Dateierweiterung. Bitte verwenden Sie eine .txt-Erweiterung."
+    },
+    "fr": {
+        "input_cidr": "Veuillez saisir la plage d'adresses IP à analyser au format CIDR. (par exemple, 192.168.0.0/24): ",
+        "wrong_cidr": "Entrée invalide. Veuillez saisir au format CIDR.",
+        "input_ports": "Veuillez saisir le port ou la plage de ports à scanner. (par exemple, 80 ou 80-100 ou 80,443 ou 80,100-500) :",
+        "input_file_name": "Veuillez saisir le nom du fichier à enregistrer. (par exemple, results.txt): ",
+        "wrong_ext": "Extension de fichier invalide. Veuillez utiliser une extension .txt."
+    },
+    "it": {
+        "input_cidr": "Inserisci l'intervallo di indirizzi IP da scannerizzare in formato CIDR. (es. 192.168.0.0/24): ",
+        "wrong_cidr": "Input non valido. Si prega di inserire nel formato CIDR.",
+        "input_ports": "Inserisci la porta o l'intervallo di porte da scannerizzare. (es. 80 o 80-100 o 80,443 o 80,100-500): ",
+        "input_file_name": "Inserisci il nome del file da salvare. (es. results.txt): ",
+        "wrong_ext": "Estensione del file non valida. Si prega di utilizzare un'estensione .txt."
+    },
+    "es": {
+        "input_cidr": "Ingrese el rango de direcciones IP para escanear en formato CIDR. (por ejemplo, 192.168.0.0/24): ",
+        "wrong_cidr": "Entrada inválida. Ingrese en formato CIDR.",
+        "input_ports": "Ingrese el puerto o rango de puertos para escanear. (por ejemplo, 80 u 80-100 u 80,443 u 80,100-500): ",
+        "input_file_name": "Por favor ingrese el nombre del archivo para guardar. (por ejemplo, results.txt): ",
+        "wrong_ext": "Extensión de archivo inválida. Utilice una extensión .txt."
+    },
+    "pt": {
+        "input_cidr": "Insira o intervalo de endereços IP para digitalizar no formato CIDR. (por exemplo, 192.168.0.0/24): ",
+        "wrong_cidr": "Entrada inválida. Insira no formato CIDR.",
+        "input_ports": "Insira a porta ou o intervalo de portas para escanear. (ex.: 80 ou 80-100 ou 80,443 ou 80,100-500): ",
+        "input_file_name": "Insira o nome do arquivo para salvar. (ex.: results.txt): ",
+        "wrong_ext": "Extensão de arquivo inválida. Por favor, use a extensão .txt."
+    },
     "ko": {
         "input_cidr": "스캔할 IP 주소 범위를 CIDR 형식으로 입력해 주세요. (예: 192.168.0.0/24): ",
         "wrong_cidr": "잘못 입력했습니다. CIDR 형식으로 다시 입력해 주세요.",
@@ -13,11 +48,39 @@
         "input_file_name": "저장할 파일 이름을 입력해 주세요. (예: results.txt): ",
         "wrong_ext": "파일 확장자가 잘못되었습니다. txt 확장자로 다시 입력해 주세요."
     },
-    "Korean": {
-        "input_cidr": "스캔할 IP 주소 범위를 CIDR 형식으로 입력해 주세요. (예: 192.168.0.0/24): ",
-        "wrong_cidr": "잘못 입력했습니다. CIDR 형식으로 다시 입력해 주세요.",
-        "input_ports": "스캔할 포트 또는 포트 범위를 입력해 주세요. (예: 80 또는 80-100 또는 80,443 또는 80,100-500): ",
-        "input_file_name": "저장할 파일 이름을 입력해 주세요. (예: results.txt): ",
-        "wrong_ext": "파일 확장자가 잘못되었습니다. txt 확장자로 다시 입력해 주세요."
+    "ja": {
+        "input_cidr": "CIDR 形式でスキャンする IP アドレス範囲を入力してください。 (例: 192.168.0.0/24): ",
+        "wrong_cidr": "無効な入力です。CIDR形式で入力してください。",
+        "input_ports": "スキャンするポートまたはポート範囲を入力してください。 (例: 80 または 80-100 または 80,443 または 80,100-500): ",
+        "input_file_name": "保存するファイルの名前を入力してください。(例: results.txt): ",
+        "wrong_ext": "無効なファイル拡張子です。 拡張子は .txt を使用してください。"
+    },
+    "zh": {
+        "input_cidr": "请以CIDR格式输入要扫描的IP地址范围。(例如, 192.168.0.0/24): ",
+        "wrong_cidr": "输入无效。请以CIDR格式输入。",
+        "input_ports": "请输入要扫描的端口或端口范围。(例如, 80 或 80-100 或 80,443 或 80,100-500): ",
+        "input_file_name": "请输入要保存的文件名。(例如, results.txt): ",
+        "wrong_ext": "文件扩展名无效。请使用.txt扩展名。"
+    },
+    "hi": {
+        "input_cidr": "कृपया सीआईडीआर प्रारूप में स्कैन करने के लिए आईपी एड्रेस रेंज दर्ज करें। (उदा., 192.168.0.0/24): ",
+        "wrong_cidr": "अमान्य निवेश। कृपया सीआईडीआर प्रारूप में दर्ज करें।",
+        "input_ports": "कृपया स्कैन करने के लिए पोर्ट या पोर्ट रेंज दर्ज करें। (उदाहरण के लिए, 80 या 80-100 या 80,443 या 80,100-500): ",
+        "input_file_name": "कृपया सहेजने के लिए फ़ाइल का नाम दर्ज करें। (उदाहरण के लिए, परिणाम.txt): ",
+        "wrong_ext": "अमान्य फ़ाइल एक्सटेंशन. कृपया .txt एक्सटेंशन का उपयोग करें."
+    },
+    "ar": {
+        "input_cidr": "يرجى إدخال نطاق عنوان IP للمسح بتنسيق CIDR. (مثال، 192.168.0.0/24): ",
+        "wrong_cidr": "إدخال غير صالح. الرجاء الإدخال بتنسيق CIDR.",
+        "input_ports": "يرجى إدخال المنفذ أو نطاق المنفذ للمسح. (مثل، 80 أو 80-100 أو 80,443 أو 80,100-500): ",
+        "input_file_name": "يرجى إدخال اسم الملف للحفظ. (مثال، results.txt): ",
+        "wrong_ext": "امتداد الملف غير صالح. الرجاء استخدام امتداد .txt."
+    },
+    "ru": {
+        "input_cidr": "Введите диапазон IP-адресов для сканирования в формате CIDR. (например, 192.168.0.0/24): ",
+        "wrong_cidr": "Неверный Ввод. Пожалуйста, введите в формате CIDR.",
+        "input_ports": "Введите порт или диапазон портов для сканирования. (например, 80 или 80-100 или 80,443 или 80,100-500): ",
+        "input_file_name": "Введите имя файла для сохранения. (например, results.txt): ",
+        "wrong_ext": "Недействительное расширение файла. Пожалуйста, используйте расширение .txt."
     }
 }
